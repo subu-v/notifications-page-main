@@ -1,2 +1,165 @@
 @use "abstracts" as *;
 @use "base" as *;
+
+.notification {
+  padding: 6.2rem;
+  &__container {
+    background-color: var(--clr-white);
+    border-radius: 10px;
+
+    box-shadow: 0 0 10px 10px rgba(221, 231, 238, 0.25);
+    padding: 2.4rem 2.4rem 1.2rem 2.4rem;
+    width: 67rem;
+  }
+
+  &__header-box,
+  &__comment-box {
+    @include flex(row, space-between, center, 0);
+  }
+
+  &__header-box {
+    margin-bottom: 2.4rem;
+  }
+  &__primary-heading {
+    color: var(--clr-dark-blue);
+    font-size: 2.4rem;
+  }
+
+  &__count {
+    background-color: var(--clr-blue);
+    border-radius: 5px;
+    color: hsl(210, 60%, 98%);
+    font-size: 1.6rem;
+    font-weight: 800;
+    width: 3rem;
+    height: 2.4rem;
+    @include flex(initial, center, center, 0);
+  }
+
+  &__toggle {
+    color: var(--clr-dark-greyish-blue);
+    font-size: 1.6rem;
+    font-weight: 500;
+    &:hover {
+      color: var(--clr-blue);
+      cursor: pointer;
+    }
+  }
+
+  &__toggle,
+  &__profile-name,
+  &__subject {
+    transition: color 0.25s ease;
+  }
+
+  &__read-box,
+  &__unread-box,
+  &__comment,
+  &__header {
+    @include flex(row, initial, initial, 1.2rem);
+  }
+
+  &__header {
+    align-items: center;
+  }
+
+  &__unread-box,
+  &__read-box,
+  &__comment-box {
+    border-radius: 10px;
+    padding: 1.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  &__unread-box {
+    background-color: hsl(210, 60%, 98%);
+  }
+
+  &__profile-img,
+  &__commented-img {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+  &__desc,
+  &__private-msg {
+    color: var(--clr-dark-greyish-blue);
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+
+  &__desc {
+    margin-bottom: 0.4rem;
+  }
+
+  &__profile-name {
+    &:link,
+    &:visited {
+      color: var(--clr-dark-blue);
+      text-decoration: none;
+      font-weight: 800;
+    }
+    &:hover {
+      color: var(--clr-blue);
+    }
+  }
+
+  &__subject {
+    &:link,
+    &:visited {
+      font-weight: 800;
+      text-decoration: none;
+      color: hsl(219, 12%, 42%);
+    }
+
+    &:hover,
+    &:active {
+      color: var(--clr-blue);
+    }
+
+    &--chess {
+      &:link,
+      &:visited {
+        color: var(--clr-blue);
+      }
+    }
+  }
+
+  &__unread-mark {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--clr-red);
+    border-radius: 50%;
+  }
+
+  &__time-ago {
+    color: hsl(219, 14%, 63%);
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    &--private-msg {
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  &__private-msg {
+    padding: 1.8rem;
+    border-radius: 5px;
+    border: 2px solid var(--clr-light-greyish-blue-1);
+    transition: background-color 0.25s ease;
+
+    &:hover {
+      background-color: var(--clr-light-greyish-blue-1);
+    }
+  }
+
+  &__commented-img {
+    border: 3px solid transparent;
+    border-radius: 10px;
+    transition: border-color 0.25s ease;
+    cursor: pointer;
+    &:hover {
+      border-color: hsl(205, 33%, 90%);
+    }
+  }
+}
