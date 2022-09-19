@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.54.9"
+  },
+  "name": "notifications-page-main",
+  "description": "![Design preview for the Notifications page coding challenge](./design/desktop-preview.jpg)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subu-v/notifications-page-main.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/subu-v/notifications-page-main/issues"
+  },
+  "homepage": "https://github.com/subu-v/notifications-page-main#readme"
+}
