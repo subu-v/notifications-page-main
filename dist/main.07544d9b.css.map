@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"main.07544d9b.css","sourceRoot":"..\\src"}
+{"version":3,"sources":["sass\\base\\_base.scss"],"names":[],"mappings":"AAAA;AAAA;AAAA;EAGE;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE","file":"main.07544d9b.css","sourceRoot":"..\\src","sourcesContent":["*,\r\n::before,\r\n::after {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: inherit;\r\n}\r\n\r\nhtml {\r\n  font-size: 62.5%;\r\n}\r\n\r\nbody {\r\n  font-family: \"Plus Jakarta Sans\", sans-serif;\r\n}\r\n"]}
