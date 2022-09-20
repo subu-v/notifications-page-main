@@ -9,6 +9,18 @@
 
 html {
   font-size: 62.5%;
+
+  @include responsive(tablet--port) {
+    font-size: 56.25%;
+  }
+
+  @include responsive(phone) {
+    font-size: 50%;
+  }
+
+  @include responsive(phone--450px) {
+    font-size: 43.75%;
+  }
 }
 
 body {
@@ -23,7 +35,7 @@ body {
   --clr-white: hsl(0, 0%, 100%);
   --clr-body-bg: hsl(210, 60%, 98%);
   --clr-dark-blue: hsl(224, 21%, 14%);
+  --clr-greyish-blue: hsl(219, 14%, 63%);
   --clr-dark-greyish-blue: hsl(219, 12%, 42%);
   --clr-light-greyish-blue-1: hsl(211, 68%, 94%);
-  // --clr-nofication-bg: ;
 }

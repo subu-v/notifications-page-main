@@ -2,14 +2,29 @@
 @use "base" as *;
 
 .notification {
-  padding: 6.2rem;
+  padding: 6.4rem 8rem;
+
+  @include responsive(table--port) {
+    padding: 6.4rem;
+  }
+
+  @include responsive(phone) {
+    padding: 2.4rem;
+  }
+
+  @include responsive(phone--450px) {
+    padding: 0;
+  }
   &__container {
     background-color: var(--clr-white);
     border-radius: 10px;
-
     box-shadow: 0 0 10px 10px rgba(221, 231, 238, 0.25);
-    padding: 2.4rem 2.4rem 1.2rem 2.4rem;
-    width: 67rem;
+    padding: 3.6rem 3.2rem 0.4rem 3.2rem;
+    max-width: 67rem;
+
+    @include responsive(phone--375px) {
+      padding: 3.6rem 2.4rem;
+    }
   }
 
   &__header-box,
@@ -18,11 +33,15 @@
   }
 
   &__header-box {
-    margin-bottom: 2.4rem;
+    margin-bottom: 3.2rem;
   }
   &__primary-heading {
     color: var(--clr-dark-blue);
     font-size: 2.4rem;
+
+    @include responsive(phone--450px) {
+      font-size: 2.6rem;
+    }
   }
 
   &__count {
@@ -34,6 +53,12 @@
     width: 3rem;
     height: 2.4rem;
     @include flex(initial, center, center, 0);
+
+    @include responsive(phone--450px) {
+      width: 4rem;
+      height: 3.6rem;
+      font-size: 2.4rem;
+    }
   }
 
   &__toggle {
@@ -44,12 +69,20 @@
       color: var(--clr-blue);
       cursor: pointer;
     }
+
+    @include responsive(phone--450px) {
+      font-size: 2rem;
+    }
   }
 
   &__toggle,
   &__profile-name,
-  &__subject {
-    transition: color 0.25s ease;
+  &__subject,
+  &__unread-box,
+  &__unread-mark,
+  &__private-msg,
+  &__commented-img {
+    transition: all 0.5s ease;
   }
 
   &__read-box,
@@ -69,10 +102,14 @@
     border-radius: 10px;
     padding: 1.6rem;
     margin-bottom: 1.2rem;
+
+    @include responsive(phone--450px) {
+      margin-bottom: 1.6rem;
+    }
   }
 
   &__unread-box {
-    background-color: hsl(210, 60%, 98%);
+    background-color: var(--clr-body-bg);
   }
 
   &__profile-img,
@@ -85,6 +122,10 @@
     color: var(--clr-dark-greyish-blue);
     font-size: 1.6rem;
     font-weight: 500;
+
+    @include responsive(phone--450px) {
+      font-size: 2rem;
+    }
   }
 
   &__desc {
@@ -108,7 +149,7 @@
     &:visited {
       font-weight: 800;
       text-decoration: none;
-      color: hsl(219, 12%, 42%);
+      color: var(--clr-dark-greyish-blue);
     }
 
     &:hover,
@@ -133,10 +174,13 @@
   }
 
   &__time-ago {
-    color: hsl(219, 14%, 63%);
+    color: var(--clr-greyish-blue);
     font-size: 1.4rem;
     font-weight: 500;
 
+    @include responsive(phone--450px) {
+      font-size: 1.8rem;
+    }
     &--private-msg {
       margin-bottom: 1.2rem;
     }
@@ -146,7 +190,6 @@
     padding: 1.8rem;
     border-radius: 5px;
     border: 2px solid var(--clr-light-greyish-blue-1);
-    transition: background-color 0.25s ease;
 
     &:hover {
       background-color: var(--clr-light-greyish-blue-1);
@@ -156,7 +199,6 @@
   &__commented-img {
     border: 3px solid transparent;
     border-radius: 10px;
-    transition: border-color 0.25s ease;
     cursor: pointer;
     &:hover {
       border-color: hsl(205, 33%, 90%);
